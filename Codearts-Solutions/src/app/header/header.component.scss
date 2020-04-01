@@ -27,11 +27,11 @@ header{
         &.open{
             left: 0%; @include opacity(1);
         }
-        .logo{
-            margin: 0 auto; width: 186px; z-index: 2; position: relative; top: 106px;
+        .logo{ 
+            margin: 100px auto 0; width: 186px; z-index: 2; position: relative;
         }
         .menu-details{
-            display: flex; align-items: center; justify-content: center; height: 100%; width: 100%; @extend .pa;
+             height: 100%; width: 100%; margin-top: 100px;
         }
         ul.details{
             margin: 0; padding: 0;

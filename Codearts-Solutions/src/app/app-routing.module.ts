@@ -9,14 +9,14 @@ import { LatestProjectsComponent } from './latest-projects/latest-projects.compo
 import { OurReviewsComponent } from './our-reviews/our-reviews.component';
 
 
-const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+const routes: Routes = [  
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},  
   {path: 'services', component: ServicesComponent},
   {path: 'projects', component: LatestProjectsComponent},
   {path: 'reviews', component: OurReviewsComponent},  
   {path: 'contact', component: ContactComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: NotfoundComponent},
 ];
 

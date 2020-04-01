@@ -1,0 +1,47 @@
+@import "../../assets/css/variables.component.scss";
+@import "../../assets/css/mixins.component.scss";
+@import "../../assets/css/extend.component.scss";
+
+header{
+    @extend .common; @extend .pa; padding: 78px 0 0 32px; z-index: 5; 
+    .header-details{
+        @extend .common; position: relative; min-height: 76px;
+        .humberger-menu{
+            @extend .pa; bottom: 0; margin: auto; width: 40px; height: 26px; cursor: pointer;
+            span{
+                @extend .pa; bottom: 0; margin: auto; width: 100%; height: 2px; background-color: $commonColor;
+                &:before{
+                    @extend .pa; bottom: auto; top: -14px; margin: auto; width: 100%; height: 2px; background-color: $commonColor; content: "";
+                }
+                &:after{
+                    @extend .pa; bottom: auto; top: 14px; margin: auto; width: 100%; height: 2px; background-color: $commonColor; content: "";
+                }
+            }
+        }
+        .logo{
+            margin: 0 auto; width: 186px;
+        }
+    }
+    .side-menu{
+        @extend .common; height: 100%; @extend .pa; position: fixed; overflow: auto; @include gradient($primaryColor,$secondaryColor,-45deg,135deg); left: -100%; @include opacity(0);
+        &.open{
+            left: 0%; @include opacity(1);
+        }
+        .logo{
+            margin: 0 auto; width: 186px; z-index: 2; position: relative; top: 106px;
+        }
+        .menu-details{
+            display: flex; align-items: center; justify-content: center; height: 100%; width: 100%; @extend .pa;
+        }
+        ul.details{
+            margin: 0; padding: 0;
+            li{
+                @extend .common; list-style: none; margin: 0 0 20px 0; padding: 0; 
+                a{
+                    text-align: center; color: $commonColor; text-transform: capitalize; font-size: 20px; width: 100%; float: left; letter-spacing: 1px;
+                } 
+            }
+        }
+    }
+
+}
